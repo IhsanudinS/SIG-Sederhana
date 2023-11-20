@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIS App</title>
+  <!-- Tambahkan link CSS Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="./style/style.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>SIG</h1>
+    <h1 style="font-size:20px"><i class="fa-solid fa-user">Muhammad Ihsanudin Syaifullah</i></h1>
+  </header>
+  <div class="box">
+    <div id="map"></div>
+    <!-- Form untuk menambahkan titik lokasi -->
+    <div class="container">
+      <div>
+        <label for="name">Nama Tempat:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div>
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" required>
+      </div>
+      <div>
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" required>
+      </div>
+      <button type="button" onclick="addLocation()">Tambahkan Lokasi</button>
+    </div>
+  </div>
+<!-- Tambahkan link JavaScript Leaflet dan jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./functions/addLocations.js"></script>
+
+<!-- Tambahkan link ke file JavaScript terpisah -->
+<script type="module">
+    import { initMap } from './functions/map-functions.js';
+    import { setupPopupEditing } from './functions/popup-functions.js';
+
+    $(document).ready(function () {
+      // Panggil fungsi inisialisasi peta
+      const map = initMap();
+
+      // Tambahkan marker atau sesuaikan dengan logika Anda
+      const marker = L.marker([0, 0]).addTo(map); // Koordinat awal, akan diperbarui saat marker diklik
+
+      // Panggil fungsi untuk menangani pop-up editing
+      setupPopupEditing(map, marker);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: space-between; /* Membuat ruang di antara elemen-elemen flex */
+    height: 100vh;
+  }
+
+  .header {
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .header h1 {
+    margin: 1px 10px 0px 10px;
+    text-align: center;
+  }
+  
+ 
+  
+  
+  #map {
+    width: 63%; /* Sesuaikan lebar peta sesuai kebutuhan */
+    height: 80%; /* Sesuaikan tinggi peta sesuai kebutuhan */
+    left: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    width: 300px; /* Sesuaikan lebar container sesuai kebutuhan */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 20px;
+  }
+
+  .container div {
+    margin-bottom: 4px;
+  }
+  
+  form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  label {
+    font-size: 16px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Optional: Style untuk pesan kesalahan */
+  .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
